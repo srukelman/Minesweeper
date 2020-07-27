@@ -207,7 +207,7 @@ public class GUI implements MouseListener{
 	    frame.add(topPanel);
 	    frame.addMouseListener(this);
 		frame.add(game,BorderLayout.SOUTH);
-		frame.setSize(600,600);
+		frame.setPreferredSize(new Dimension(500,575));
 		frame.setTitle("Minesweeper");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
@@ -329,10 +329,10 @@ public class GUI implements MouseListener{
 	}
 	public void bombClicked() {
 		System.out.println("game over");
-		topPanel.setBackground(new Color(213, 134, 145, 123));
+		topPanel.setBackground(new Color(250, 42, 42));
 		gameOver = new JLabel("Game Over");
 		topPanel.remove(numFlags);
-		numBombs.setText("Game Over");
+		numBombs.setText("GAME OVER!");
 		gameIsOver=true;
 
 		this.openBombs();
@@ -470,10 +470,10 @@ public class GUI implements MouseListener{
 				}
 			}
 		}
-		topPanel.setBackground(new Color(23, 255, 0, 123));
+		topPanel.setBackground(new Color(52,250,36));
 		//gameOver = new JLabel("You Win");
 		topPanel.remove(numFlags);
-		numBombs.setText("You Win");
+		numBombs.setText("YOU WIN!");
 		gameIsOver=true;
 		return true;
 	}
