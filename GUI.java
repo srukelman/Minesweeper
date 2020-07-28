@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
@@ -476,6 +477,14 @@ public class GUI implements MouseListener{
 		numBombs.setText("YOU WIN!");
 		gameIsOver=true;
 		return true;
+	}
+	public void howToPlay() {
+		JOptionPane.showMessageDialog(frame, "Welcome to Minesweeper","Welcome",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Left Click - Dig up a Square\nRightClick - Flag a Square","Controls",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Flag squares that are mines and Dig Up squares that are not","How To Play",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "A number on a square represents the number of mines adjacent to that square","How To Play",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Flag all the mines and dig all the other squares","How To Win",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Good Luck!","",JOptionPane.PLAIN_MESSAGE);
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
